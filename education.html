@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is it I read about?</title>
+    <link rel="stylesheet" href="cssStufs/education.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>About my education:</h1>
+    <p>My education process started, when I was 7 years old in russian school "МОУ СОШ 47",</p>
+    <p>and after moving to Israel, I continued in class "tet" in Atid Raziel, where I learned</p>
+    <p>Hebrew and learned also physics 5 points. And with teachers of music I learned<p/>
+    <p> to play some instruments, but it was not official studies. Actually with physics group</p>
+    <p>we participated in world competition of Cern and get 13's place. And once we participated </p>
+    <p>in competition for ideas of moon rovers. And now I continue my educational journey in</p>
+    <p>Raichman University in Herzlia 3rd year of Computer Science.</p>
+    <br>
+    <br>
+    <form>
+        <input id="buttonForFirst"  type="button" value="show first Certificate" onclick="clickedFirst()">
+        <input id="buttonForSecond" type="button" value="show sedond Certificate" onclick="clickedSecond()">
+    </form>
+    <div id="conteinerButtons">
+        <img id="cernimg" src='images/CERN.jpg' class="center" alt="CertificateFirst">
+        <img id="teuda" src='images/teuda.jpg' class="center" alt="CertificateSecond">
+    </div>
+    <script>
+        function clickedFirst() {
+            if (cernimg === 1) {
+                document.getElementById("cernimg").style.display = "inline";
+                document.getElementById("buttonForFirst").value="hide first Certificate";
+                return cernimg = 0;
+            } else {
+                document.getElementById("buttonForFirst").value="show first Certificate";
+                document.getElementById("cernimg").style.display = "none";
+                return cernimg = 1;
+            }
+        }
+        function clickedSecond(){
+            if(teuda === 1){
+                document.getElementById("teuda").style.display="inline"
+                document.getElementById("buttonForFirst").value="hide second Certificate";
+                return teuda = 0;
+            }else{
+                document.getElementById("buttonForFirst").value="show second Certificate";
+                document.getElementById("teuda").style.display="none"
+                return teuda=1;
+            }
+        }
+    </script>
+</header>
+</body>
+</html>

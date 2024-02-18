@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+    color:black;
+}
+#header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(227, 168, 150, 0.9),rgba(227, 168, 150, 0.9)),url('../images/pexels-photo-210854.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+h1, p{
+    text-align: center;
+}

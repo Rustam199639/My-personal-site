@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About my Employment</title>
+  <link rel="stylesheet" href="cssStufs/employment.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+  <h1>About my Employment:</h1>
+  <p>I started to work, when I was 19 years old after Midle School, and it was year before army.</p>
+  <p>So I was waiter in some restaurants and also office clerk in Open University of Raanana.</p>
+  <p>After I did army in military service in role of commander and also was clerk in office of</p>
+  <p> Technological Forces. During the army service I started to work QA in "Paradigm" company,</p>
+  <p>that works with geological data, for finding oil.</p>
+  <br>
+  <br>
+  <form>
+    <input id="buttonForRecommendation"  type="button" value="show Recommendation" onclick="clicked()">
+  </form>
+  <img id="recommendletter" src='images/1_11zon.jpg' class="center" alt="recommendationLetter">
+  <script>
+    function clicked() {
+      let x =document.getElementById("recommendletter");
+      let y = document.getElementById("buttonForRecommendation");
+      if (x.style.display === "none" ) {
+        x.style.display = "block";
+        y.value="hide Recommendation";
+        return recommendletter = 0;
+      } else {
+        y.value="show Recommendation";
+        x.style.display = "none";
+        return recommendletter = 1;
+      }
+    }
+  </script>
+</header>
+</body>
+</html>

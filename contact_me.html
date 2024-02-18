@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="cssStufs/contact_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contact Form</title>
+</head>
+<body>
+    <header id="headerOfContact">
+        <div class="containerContact">
+            <form  onsubmit="sendEmail(); reset(); return false;">
+                <h1> Get in touch</h1>
+                <label for="name"></label><input type="text" id="name" placeholder="Your Name" required>
+                <label for="email"></label><input type="email" id="email" placeholder="Email Id" required>
+                <label for="phone"></label><input type="text" id="phone" placeholder="Phone Number" required>
+                <label for="message"></label><textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.rambler.ru",
+                    Username : "rustamhtmltry@rambler.ru",
+                    Password : "password",
+                    To : 'rustamhtmltry@rambler.ru',
+                    From : document.getElementById("email").value,
+                    Subject : "New Contact Form Enquiry",
+                    Body : "And this is the body"
+                }).then(
+                    message => alert(message)
+                );
+            }
+        </script>
+    </header>
+
+</body>
+</html>

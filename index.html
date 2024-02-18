@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="rusite" content="with=device-width, initial-scale=1.0">
+        <title>Rustam Mirzoev</title>
+        <link rel="stylesheet" href="cssStufs/styleindex.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <section class="header">
+        <div class="dynamic-background"></div>
+        <div id="box1" class="boxes"></div>
+        <div id="box2" class="boxes"></div>
+        <div id="box3" class="boxes"></div>
+
+        <h1>Welcome to my personal web site</h1>
+        <h3 id ="aboutme">About me:</h3>
+        <p id="mynameis">My name is <strong>Rustam</strong> and little about my self:</p>
+        <div class="container" id="stretch">
+            <div class="leftUp">
+                <li><a id="who">Who am I?,</a></li>
+                <a href="who_am_i.html" class="whoButton">Click here to know who I am</a>
+            </div>
+            <div class="rightUp">
+                <li><a id="hob" >My hobbies</a></li>
+                <a href="hobbies.html" class="hobbiesButton">Click here to know about my hobbies</a>
+            </div>
+            <div class="leftMiddle">
+                <li> <a id="educ">Education</a></li>
+                <a href="education.html" class="educationButton">Click here to know about my education</a></div>
+            <div class="rightMiddle">
+                <li> <a id="employment">Employment</a></li>
+                <a href="employment.html" class="employmentButton">Click here to know my employment</a>
+            </div>
+            <div class="leftDown">
+                <li> <a id="contactForm">Contact Form</a></li>
+                <a href="contact_me.html" class="contactFormButten">Click here to you want contact me</a>
+            </div>
+            <div class="rightDown">
+                <li> <a id="linkedin">My Linkedin</a></li>
+                <a href="https://www.linkedin.com/in/rustam-mirzoev-6660b7175/"><img src="images/linkedin_original_logo_icon_146435.png" width="50" alt="image"></a>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let colorIndex = 0;
+                function updateBackgroundColor() {
+                    const hue = colorIndex % 360;
+                    const dynamicBackground = document.querySelector('.dynamic-background');
+                    dynamicBackground.style.background = `linear-gradient(135deg, hsla(${hue}, 100%, 50%, 0.5), hsla(${(hue + 45) % 360}, 100%, 50%, 0.5))`;
+
+                    colorIndex++;
+                }
+                setInterval(updateBackgroundColor, 100);
+            });
+        </script>
+    </section>
+
+    </body>       
+</html>
